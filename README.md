@@ -14,6 +14,6 @@ Cette structure est composée de 5 dossiers :
 
 Le gitMaster de chaque groupe projet devra "forker" ce dépôt pour créer le dépôt de son groupe projet.
 
-Ensuite chaque membre du groupe projet avec Gitkraken devra cloner le dépôt se don gitMaster. 
+Ensuite chaque membre du groupe projet avec Gitkraken devra cloner le dépôt de son gitMaster pour avoir une copie locale du dépôt de son groupe projet. 
 
 

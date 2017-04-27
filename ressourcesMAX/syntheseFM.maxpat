@@ -38,27 +38,41 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-1",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 77.546074, 362.0495, 53.0, 20.0 ],
-					"style" : "",
-					"text" : "Volume"
+					"comment" : "",
+					"id" : "obj-27",
+					"index" : 2,
+					"maxclass" : "inlet",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 682.0, 45.668316, 30.0, 30.0 ],
+					"style" : ""
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-2",
-					"interpinlet" : 1,
-					"maxclass" : "gain~",
-					"numinlets" : 2,
-					"numoutlets" : 2,
-					"orientation" : 2,
-					"outlettype" : [ "signal", "int" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 44.883961, 344.004944, 28.0, 77.0 ],
+					"comment" : "",
+					"id" : "obj-26",
+					"index" : 1,
+					"maxclass" : "inlet",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 422.0, 55.0, 30.0, 30.0 ],
+					"style" : ""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"comment" : "",
+					"id" : "obj-25",
+					"index" : 1,
+					"maxclass" : "outlet",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 43.757679, 449.0, 30.0, 30.0 ],
 					"style" : ""
 				}
 
@@ -200,7 +214,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 237.477814, 18.0, 57.0, 20.0 ],
+					"patching_rect" : [ 237.477814, 1.0, 57.0, 20.0 ],
 					"style" : "",
 					"text" : "Duration"
 				}
@@ -223,7 +237,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 237.477814, 75.742577, 84.0, 22.0 ],
+					"patching_rect" : [ 237.477814, 58.742577, 84.0, 22.0 ],
 					"style" : "",
 					"text" : "setdomain $1"
 				}
@@ -269,19 +283,6 @@
 					"patching_rect" : [ 143.996582, 168.371292, 75.0, 20.0 ],
 					"style" : "",
 					"text" : "Harmonicity"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-16",
-					"local" : 1,
-					"maxclass" : "ezdac~",
-					"numinlets" : 2,
-					"numoutlets" : 0,
-					"patching_rect" : [ 44.883961, 451.069305, 44.0, 44.0 ],
-					"prototypename" : "helpfile",
-					"style" : ""
 				}
 
 			}
@@ -391,7 +392,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 237.477814, 45.668316, 62.0, 22.0 ],
+					"patching_rect" : [ 237.477814, 28.668316, 62.0, 22.0 ],
 					"style" : "numberGold-1",
 					"triscale" : 0.9
 				}
@@ -459,30 +460,10 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
+					"destination" : [ "obj-25", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-19", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-16", 1 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"order" : 0,
-					"source" : [ "obj-2", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-16", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"order" : 1,
-					"source" : [ "obj-2", 0 ]
 				}
 
 			}
@@ -519,6 +500,35 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-24", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-13", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"order" : 0,
+					"source" : [ "obj-26", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-14", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"order" : 1,
+					"source" : [ "obj-26", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-5", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-27", 0 ]
 				}
 
 			}
@@ -563,19 +573,11 @@
 
 			}
  ],
-		"dependency_cache" : [ 			{
-				"name" : "simpleFM~.maxpat",
-				"bootpath" : "C74:/docs/tutorial-patchers/msp-tut",
-				"type" : "JSON",
-				"implicit" : 1
-			}
- ],
-		"autosave" : 0,
 		"styles" : [ 			{
 				"name" : "newobjYellow-1",
 				"default" : 				{
-					"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ],
-					"fontsize" : [ 12.059008 ]
+					"fontsize" : [ 12.059008 ],
+					"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
