@@ -5,11 +5,11 @@
 			"major" : 7,
 			"minor" : 3,
 			"revision" : 3,
-			"architecture" : "x64",
+			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 201.0, 79.0, 594.0, 711.0 ],
+		"rect" : [ 201.0, 79.0, 1171.0, 711.0 ],
 		"bgcolor" : [ 0.886275, 0.886275, 0.886275, 1.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
@@ -46,7 +46,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 504.0, 430.0, 50.0, 22.0 ],
 					"style" : "",
-					"text" : "146"
+					"text" : "0"
 				}
 
 			}
@@ -474,9 +474,9 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 98.0, 257.0, 148.0, 22.0 ],
+					"patching_rect" : [ 98.0, 257.0, 189.0, 22.0 ],
 					"style" : "",
-					"text" : "classic-channel #1 #2 #0"
+					"text" : "filtreBande #1 #2 #0"
 				}
 
 			}
