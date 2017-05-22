@@ -3,13 +3,13 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 7,
-			"minor" : 2,
-			"revision" : 4,
-			"architecture" : "x64",
+			"minor" : 3,
+			"revision" : 1,
+			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 0.0, 0.0, 640.0, 480.0 ],
+		"rect" : [ 684.0, 215.0, 962.0, 721.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -36,9 +36,106 @@
 		"tags" : "",
 		"style" : "",
 		"subpatcher_template" : "",
-		"boxes" : [  ],
-		"lines" : [  ],
-		"dependency_cache" : [  ],
+		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-6",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "signal" ],
+					"patching_rect" : [ 351.0, 318.0, 182.0, 22.0 ],
+					"style" : "",
+					"text" : "\"effetAudio2(redo OSC).maxpat\""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-5",
+					"maxclass" : "ezdac~",
+					"numinlets" : 2,
+					"numoutlets" : 0,
+					"patching_rect" : [ 351.0, 480.0, 45.0, 45.0 ],
+					"style" : ""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"data" : 					{
+						"clips" : [ 							{
+								"filename" : "drumLoop.aif",
+								"filekind" : "audiofile",
+								"loop" : 1,
+								"content_state" : 								{
+									"followglobaltempo" : [ 0 ],
+									"originaltempo" : [ 120.0 ],
+									"formant" : [ 1.0 ],
+									"quality" : [ "basic" ],
+									"pitchshift" : [ 1.0 ],
+									"timestretch" : [ 0 ],
+									"mode" : [ "basic" ],
+									"basictuning" : [ 440 ],
+									"pitchcorrection" : [ 0 ],
+									"originallengthms" : [ 0.0 ],
+									"formantcorrection" : [ 0 ],
+									"slurtime" : [ 0.0 ],
+									"speed" : [ 1.0 ],
+									"originallength" : [ 0.0, "ticks" ],
+									"play" : [ 0 ]
+								}
+
+							}
+ ]
+					}
+,
+					"id" : "obj-3",
+					"maxclass" : "playlist~",
+					"numinlets" : 1,
+					"numoutlets" : 5,
+					"outlettype" : [ "signal", "signal", "signal", "", "dictionary" ],
+					"patching_rect" : [ 351.0, 140.0, 150.0, 30.0 ],
+					"style" : ""
+				}
+
+			}
+ ],
+		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-6", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-3", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-5", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-6", 0 ]
+				}
+
+			}
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "drumLoop.aif",
+				"bootpath" : "C74:/media/msp",
+				"type" : "AIFF",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "effetAudio2(redo OSC).maxpat",
+				"bootpath" : "~/Documents/projetS2/votreAppli/regieAudio/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "OSC-route.mxo",
+				"type" : "iLaX"
+			}
+ ],
 		"autosave" : 0
 	}
 
