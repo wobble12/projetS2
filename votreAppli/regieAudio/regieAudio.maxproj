@@ -2,8 +2,8 @@
 	"name" : "regieAudio",
 	"version" : 1,
 	"creationdate" : -721919280,
-	"modificationdate" : -716656737,
-	"viewrect" : [ 194.0, 194.0, 300.0, 500.0 ],
+	"modificationdate" : -716656286,
+	"viewrect" : [ 4.0, 45.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
@@ -22,6 +22,11 @@
 			}
 ,
 			"effetAudio2(redo OSC).maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"mixageAudio.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}

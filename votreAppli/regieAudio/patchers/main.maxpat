@@ -38,6 +38,19 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-1",
+					"maxclass" : "newobj",
+					"numinlets" : 6,
+					"numoutlets" : 1,
+					"outlettype" : [ "signal" ],
+					"patching_rect" : [ 94.0, 65.0, 122.0, 22.0 ],
+					"style" : "",
+					"text" : "mixageAudio.maxpat"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-6",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -119,14 +132,30 @@
 
 			}
  ],
+		"parameters" : 		{
+			"obj-1::obj-7" : [ "live.gain~[2]", "live.gain~", 0 ],
+			"obj-1::obj-11" : [ "live.gain~[6]", "live.gain~", 0 ],
+			"obj-1::obj-8" : [ "live.gain~[3]", "live.gain~", 0 ],
+			"obj-1::obj-9" : [ "live.gain~[4]", "live.gain~", 0 ],
+			"obj-1::obj-4" : [ "live.gain~[1]", "live.gain~[1]", 0 ],
+			"obj-1::obj-5" : [ "live.gain~", "live.gain~", 0 ],
+			"obj-1::obj-10" : [ "live.gain~[5]", "live.gain~", 0 ]
+		}
+,
 		"dependency_cache" : [ 			{
 				"name" : "drumLoop.aif",
-				"bootpath" : "C74:/media/msp",
+				"bootpath" : "~/Documents/projetS2/votreAppli/regieAudio/media",
 				"type" : "AIFF",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "effetAudio2(redo OSC).maxpat",
+				"bootpath" : "~/Documents/projetS2/votreAppli/regieAudio/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "mixageAudio.maxpat",
 				"bootpath" : "~/Documents/projetS2/votreAppli/regieAudio/patchers",
 				"type" : "JSON",
 				"implicit" : 1
